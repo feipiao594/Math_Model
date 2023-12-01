@@ -1,0 +1,281 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2.8cm,bottom=2cm}
+\setlength{\headheight}{18pt}
+\setlength{\headsep}{18pt}
+\setlength{\footskip}{25pt}
+
+
+%\usepackage{mathptmx}
+\usepackage{newtxtext}
+%\usepackage{fontspec}
+%\setmainfont{Times New Roman}
+
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{parskip}
+\usepackage{lipsum}
+\usepackage{booktabs}
+\usepackage{float}
+
+%\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{fancyhdr}
+\usepackage{url}
+\lhead{Team}
+\rhead{}
+
+% setting of table of contents
+\renewcommand\cftsecaftersnum{.}
+\renewcommand\cftsubsecaftersnum{.}
+\renewcommand\cftsubsubsecaftersnum{.}
+
+% setup hyperlink
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=blue,
+  filecolor=blue,
+  urlcolor=blue
+}
+
+% graphic path
+\graphicspath{{./figures/}}
+\DeclareGraphicsExtensions{.pdf, .jpg, .tif, .png}
+
+% package for section etc.
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries}{\thesection.}{1.2ex}{}
+\titleformat{\subsection}{\large\bfseries}{\thesubsection.}{1.2ex}{}
+\titleformat{\subsubsection}{\normalfont\itshape}{\normalfont\thesubsubsection.}{1.2ex}{}
+
+% command for line spacing
+%\renewcommand{\baselinestretch}{1.1}
+
+\setlength{\parskip}{1em}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{definition}{Definition}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\thispagestyle{empty}
+
+\medskip
+\begin{center}
+\large\bfseries Summary
+\end{center}
+The popularity of electric buses represents the possibility of further progress towards the goal of sustainable development of 
+urban transportation. This paper collected the city characteristic data of St. Louis, established carbon emission model, atmosphere 
+model, life cycle cost model, cost-benefit model and comprehensive evaluation model, introduced linear programming, analytic hierarchy 
+process and other methods, comprehensively analyzed the ecological and economic benefits of electric buses, and helped the city plan 
+the update roadmap of electric buses, which has strong practical significance.
+
+For problem 1, we need to analyze the ecological benefits that electric bus fleets can bring. From a practical point of 
+view, electric buses use electric energy as a power source, and the operation process has the environmental protection characteristics 
+of zero emission of pollutants. We determined that the object of the study is the most important factor affecting the ecological 
+environment emitted by diesel vehicles, namely carbon dioxide. Carbon emission model was established, performance data of electric 
+bus and diesel bus were collected, linear analysis method was introduced to calculate the total annual carbon emission of each bus, 
+and benefit analysis was conducted by comparing the data of the two. Secondly, considering that the damage of diesel vehicles to the 
+ecological environment is partly due to the emission of air pollutants, we established an atmospheric model and calculated the total 
+emissions of different types of air pollutants of the two types of buses in the service life, and drew a conclusion from the analysis.
+
+For problem 2, what we need to analyze is the financial cost-benefit problem. From the current industry development point of view, 
+the operating costs of electric buses are decreasing, which is reflected in the reduction of battery prices and the continuous 
+investment of government financial subsidies, which is cost-effective. Therefore, we first established the life cycle cost model, 
+divided the cost generated in the life cycle of the two types of buses into two types, and analyzed and compared the cost difference 
+between the two. Secondly, a cost-benefit model is established to analyze the benefits of the electric bus fleet and calculate its 
+total upfront investment cost. The net present value income analysis method is introduced to calculate the net present value income 
+that can be produced during the service life cycle of electric buses, and the economic benefits of electric bus operation are analyzed 
+from the data.
+
+For problem 3, we need to create a 10-year roadmap to help St. Louis plan the renewal of its electric bus fleet. 
+After analysis, we divide the project cycle into four parts. During the initial assessment and planning period, we conduct market 
+research and infrastructure evaluation and identify government financial subsidy options. In the pilot stage, a small number of 
+electric buses are put into pilot use on selected routes, and the operation data of electric buses and passenger feedback are 
+collected, so as to determine the detailed operation plan. In the phased deployment phase, the main problem is to solve the 
+infrastructure problem and optimize the route. In the comprehensive transformation phase, the entire bus fleet will be electrified 
+and a long-term vehicle maintenance update mechanism and a regular fleet evaluation mechanism will be established. Therefore, 
+we establish a comprehensive evaluation model, introduce linear programming analysis method, determine the weight of factors 
+affecting route planning, and combine the actual data to determine the optimal deployment route of electric buses.
+
+
+%关键词
+\vspace{0.4cm}
+\noindent \textbf{Keywords: }\LaTeX,~  HiMCM/MidMCM,~ Champion
+
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+%正文部分
+\pagestyle{fancy}
+\rhead{Page \thepage~of~25}
+\setcounter{page}{1}
+\section{Introduction}
+\subsection{Restatement of the Problem}
+With the continuous deterioration of the ecological environment, more and more people are aware of the importance of environmental 
+protection and practice environmental protection in all aspects of life, and public transportation has become the choice of more 
+and more people. At present, most buses still use diesel as a power source, but some cities have put electric buses into operation, 
+which has a huge boost to energy conservation, emission reduction and pollution reduction. More and more countries and regions are 
+aware of the superiority of electric buses, and are adopting policies to vigorously support the development of electric bus industry.
+
+However, challenges include high initial costs, charging infrastructure development,lengthy charging times, and potential range 
+limitations.
+
+Based on this situation, we need to solve the following problems:
+
+\textbullet{Construct a model to aid cities in understanding the ecological consequences of transitioning to an all-electric bus fleet.}
+
+\textbullet{Construct a model that focuses on the financial implications associated with a conversion to e-buses.}
+
+\textbullet{Transportation officials in metropolitan areas are exploring approaches in which they
+gradually change their fleet from combustion engines buses to electric. Assuming the goal
+is to have a fully electric fleet no later than 2033, utilize your previously developed
+models to craft a 10-year roadmap that urban transport authorities can leverage to plan
+their e-bus fleet updates.}
+
+\textbullet{Write a one-page letter to the transportation officials of one of your chosen
+metropolitan areas in which you detail your recommendation for their transition to
+e-buses.}
+
+\subsection{Overview of Our Work} %问题分析
+
+\subsubsection{Problem 1:Ecological Benefits Analysis}
+This question mainly studies the ecological benefits brought by electric buses. After analysis, we decided to directly reflect the 
+impact of electric buses and diesel vehicles on the ecological environment through detailed data and then compare the ecological 
+benefits brought by electric buses. First of all, considering that the main substance emitted by bus operation is carbon dioxide, 
+we establish a carbon emission model, analyze the carbon emission size of the two types of vehicles combined with the collected 
+performance data, and compare the results. Secondly, considering the impact of global warming, cars will also cause air pollution. 
+Therefore, we established an atmospheric model to collect pollutant emission factors of other harmful substances in the two types of 
+cars except carbon dioxide, and then calculated the emissions of different kinds of pollutants during the operation of the two types 
+of buses, and finally conducted data analysis and comparison.
+
+\subsubsection{Problem 2:Cost-effectiveness Analysis}
+The purpose of this question is to find out whether electric buses are competitive in the market compared with diesel buses in terms 
+of both costs and benefits, that is, to analyze whether the economic benefits of electric buses are worthy of large-scale use by the 
+local government. First of all, considering that both electric buses and diesel buses have service life, and the process of replacing
+diesel buses with electric buses is gradual, we established a life cycle cost model, determined the life cycle length as the service 
+life of buses, and roughly divided the cost into acquisition cost and maintenance cost within the life cycle. Combined with the 
+collected performance parameters of the two types of vehicles and the relevant city characteristics data of St. Louis, the various 
+costs generated during the life cycle of the two types of vehicles were simply summed up and compared, and the market competitiveness 
+of the two types of buses was compared. Secondly, the cost-benefit analysis model is established, the net present value calculation 
+formula is introduced, the income is converted into data, and the economic benefit of electric buses is judged by judging the size of 
+the data.
+
+\subsubsection{Problem 3:Optimal Roadmap Planning}
+This question requires us to develop a 10-year roadmap for the city's transportation authorities to help them update the city's 
+electric bus fleet. First of all, we make it clear that due to the characteristics of electric buses themselves, problems such as 
+infrastructure, public acceptance, and available funds need to be solved before they are put into trial use, and the completion of 
+the all-electric bus fleet needs to be carried out gradually from the pilot stage where a small number of buses are put into use. 
+Therefore, we will divide the 10-year renewal cycle into four stages, and will complete the renewal and mature use of the all-electric 
+bus fleet at the end of these four stages. We establish a comprehensive evaluation model, enumerates multiple factors affecting route 
+planning, and introduces analytic hierarchy process (AHP) to confirm the respective weights of the influencing factors, so as to 
+achieve the goal of maximum passenger flow coverage and minimum operating cost in the roadmap planning.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{flowchart.pdf}% 图片相对位置
+	\caption{Flowchart for this Article} % 图片标题
+	\label{1} 
+\end{figure}
+
+
+\section{Assumptions and Justifications}
+We make the following assumptions to help us with our modeling. These assumptions form the background for our subsequent analysis.
+
+\textbullet{\bfseries{Assumption 1:the bus will run normally, independent of personal factors such as the driver and other small 
+probability events such as extreme weather.}}This is because we need ensure that the many factors in the model such as service 
+frequency, emissions, etc., do not produce abnormal extreme values.
+
+\textbullet{\bfseries{Assumption 2:the investment plan of electric buses is not affected by external factors and is continuously 
+supported by policies.}}This is done to ensure that the model is built according to the established plan.
+
+\textbullet{\bfseries{Assumption 3:the purchase and maintenance cost of buses changes according to the constant annual growth rate.}}
+
+\textbullet{\bfseries{Assumption 4:the electric bus does not have a small probability event such as a car accident and other abnormal 
+circumstances in 10 years, resulting in the change of the given number and revenue cost.}}This is to reduce the impact of small 
+probability events on the model.
+
+\section{Notations}
+\begin{table}[!htbp]
+\centering
+    \begin{tabular}{ccc}
+	\toprule
+	Symbol&Definition&Unit\\
+	\midrule
+	\(x_i\)&Evaluation indicator&-\\
+	\({\tilde x_i}\)&Standardized indicators&-\\
+	\({\mu _i}\)&Average value&-\\
+	\(s_i\)&Standard deviation&-\\
+	\({R}\)&Correlation coefficient matrix&-\\
+	\(y_i\)&Principal Components&-\\
+	\(b_i\)&The information contribution of eigenvalue&-\\
+	\(T\)&Composite score&-\\
+	\bottomrule
+    \end{tabular}
+\end{table}
+
+
+\section{Problem 1:Ecological Benefits Analysis}
+\subsection{Comparison of Carbon Emission Based on Carbon Emission Model}\
+\subsubsection{Establishment of Model}
+\subsubsection{Data Analysis}
+
+\subsection{Comparison of Pollutant Emissions Based on Atmospheric Model}
+\subsubsection{Establishment of Model}
+\subsubsection{Data Analysis}
+
+\section{Problem 2:Cost-effectiveness Analysis}
+\subsection{Cost Comparison Based on Life Cycle Model}
+\subsubsection{Establishment of Model}
+\subsubsection{Data Analysis}
+
+\subsection{Economic Benefit Analysis Based on Cost-benefit Analysis Model}
+\subsubsection{Establishment of Model}
+\subsubsection{Data Analysis}
+
+\section{Problem 3:Optimal Roadmap Planning Problems Based on Comprehensive Evaluation Model}
+\subsection{Ten Year Work Deploment Arrangement}
+\textbullet{Stage 1:}
+\textbullet{Stage 2:}
+\textbullet{Stage 3:}
+\textbullet{Stage 4:}
+\subsection{Optimal Roadmap Planning Based on Comprehensive Evaluation Model}
+\subsubsection{Establishment of Model}
+\subsubsection{Data Analysis}
+
+
+\newpage
+\section{A Letter to the Transportation Officials}
+\lipsum[1-2]
+
+\section{Sensitivity Analysis}
+\lipsum[1-2]
+
+
+\section{Model Evaluation and Further Discussion}
+
+\subsection{Advantages of Model}
+
+\subsection{Disadvantages of Model}
+
+
+\newpage
+\begin{thebibliography}{100}
+\bibitem{1}\url{https://afdc.energy.gov/vehicles/electric_emissions.html}
+\bibitem{2}\url{https://about.bnef.com/electric-vehicle-outlook/}
+\bibitem{3}\url{https://www.apta.com/research-technical-resources/transit-statistics/electric-bus-fact-sheets/}
+\end{thebibliography}
+
+\end{document}
