@@ -1,0 +1,11 @@
+function [status, lambda_max, CI, CR]=AHP(judge_matrix, n)
+status=true;
+CI=0; CR=0; lambda_max=0;
+RI=[0,0,0.52,0.89,1.12,1.26,1.36,1.41,1.46,1.49,1.52,1.54,1.56,1.58,1.59];
+if (~isJudgeMartix(judge_matrix, n))
+    return;
+end
+matrix_ = judge_matrix(1:1:n,1:1:n);
+[eigen_vec_Matrix,eigen_value_matrix] = eig(matrix_); %求矩阵的特征值和特征向量，x为特征向量矩阵，y为特征值矩阵。
+eigenValueArray = diag(eigen_value_matrix); %求对角线向量
+lambda_max,lambda = max(eigenValueArray); %求最大特征值
