@@ -2,7 +2,7 @@
 
 ## function
 
-### `isJudgeMartix`
+### `is_judge_martix`
 
 ```matlab
 function res=isJudgeMatrix(Matrix_, n)
@@ -13,10 +13,10 @@ function res=isJudgeMatrix(Matrix_, n)
 - 返回值：返回一个逻辑值，当值为1时，其是一个合法的判断矩阵，值为0则不是
 - 当函数传入的矩阵维度小于n时，会导致数组越界的运行时错误
 
-### `AHP_*`
+### `ahp_*`
 
 ```matlab
-function [status, Weight, lambda_max, eigenvec_match_eigenvalue, CI, CR]=AHP_*(judge_matrix, n)
+function [status, Weight, lambda_max, eigenvec_match_eigenvalue, CI, CR]=ahp_*(judge_matrix, n)
 ```
 
 - 功能简介，重要函数，计算层次分析法AHP的相关值
@@ -25,10 +25,10 @@ function [status, Weight, lambda_max, eigenvec_match_eigenvalue, CI, CR]=AHP_*(j
 - status表示是否计算成功的状态，成功则返回1，否则返回0，报错时也会提示0，此时后面得到的其余数据不具有有效意义
 - 一致性比率CR计算出小于0.1时，会提示重写矩阵，并且此时status返回0，代表无意义
 
-### `AHP`
+### `ahp`
 
 ```matlab
-function [status, Weight]=AHP(judge_matrix, n)
+function [status, Weight]=ahp(judge_matrix, n)
 ```
 
 - 功能简介，重要函数，计算层次分析法AHP最终所得到的权重值

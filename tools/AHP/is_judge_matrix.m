@@ -1,4 +1,4 @@
-function res=isJudgeMatrix(Matrix_, n)
+function res=is_judge_matrix(Matrix_, n)
 res=false;
 if(n<2)
     disp("ERROR: The matrix dimension is less than 2")
