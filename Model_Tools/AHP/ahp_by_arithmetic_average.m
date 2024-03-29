@@ -1,4 +1,4 @@
-function [status, Weight, lambda_max, eigenvec_match_eigenvalue, CI, CR]=ahp_arithmetic_average(judge_matrix, n)
+function [status, Weight, lambda_max, eigenvec_match_eigenvalue, CI, CR]=ahp_by_arithmetic_average(judge_matrix, n)
 status=false;
 CI=0; CR=0; lambda_max=0;
 eigenvec_match_eigenvalue=0;
